@@ -1,0 +1,22 @@
+.buttons_grp{
+  display: block;
+  z-index: 100;
+  margin-bottom: 5px;
+}
+
+#video-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-auto-rows: 200px;
+  margin-bottom: 1rem;
+  grid-gap: 5px;
+}
+
+video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  /* margin: 5px 10px;
+  padding: 0 10px; */
+}
