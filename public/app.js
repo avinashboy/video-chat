@@ -2,11 +2,19 @@ const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 const peers = {}
 const myPeer = new Peer(undefined, {
-  path: '/peerjs',
-  host: '/',
+  config: {
+    iceServers: [
+      {
+        url: "turn:stun.wblare.com:3478",
+        username: "mike",
+        credential: "mike7777777",
+      },
+    ],
+  },
+  host: "/",
+  port: "443",
   secure: true,
-  port: '443'
-})
+});)
 
 const cName = makeid(5)
 console.log('cName:', cName)
